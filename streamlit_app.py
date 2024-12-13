@@ -145,9 +145,10 @@ def main():
             # Tampilkan gambar berdampingan
             col1, col2 = st.columns(2)
             with col1:
-                st.image(input_image, caption=f"Gambar Asli - {uploaded_file.name}", use_column_width=True)
+                st.image(input_image, caption=f"Gambar Asli - {uploaded_file.name}", use_container_width=True)
             with col2:
-                st.image(output_image, caption=f"Gambar Hasil - {uploaded_file.name}", use_column_width=True)
+                st.image(output_image, caption=f"Gambar Hasil - {uploaded_file.name}", use_container_width=True)
+
 
             # Tambahkan tombol unduh hasil
             result_image = Image.fromarray(output_image.astype('uint8'))
